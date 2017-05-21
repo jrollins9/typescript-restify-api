@@ -1,0 +1,37 @@
+{
+  "name": "node-rest-api",
+  "version": "1.0.0",
+  "description": "REST API using Typescript, NodeJS, restify, restify-jwt, gulp",
+  "author": {
+    "name": "Jared Rollins",
+    "email": "jared@jaredrollins.com",
+    "url": "https://www.jaredrollins.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jrollins9/typescript-restify-api"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "node_modules/.bin/tsc",
+    "start": "npm run build && node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-mkdirp": "^0.1.1",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-typescript": "^3.1.6",
+    "mkdirp": "^0.5.1",
+    "run-sequence": "^1.2.2",
+    "typescript": "^2.3.2"
+  },
+  "dependencies": {
+    "@types/mongoose": "^4.7.11",
+    "@types/restify": "^4.3.1",
+    "mongoose": "^4.9.8",
+    "restify": "^4.3.0"
+  }
+}

@@ -1,0 +1,16 @@
+# Webstorm editor configuration
+.idea/
+
+# VS Code editor configuration
+.vscode/
+
+# Dependency directory
+node_modules
+
+# Logs
+logs/
+*.log
+
+# Output
+build/
+dist/

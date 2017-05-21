@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "target": "es2015",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "removeComments": true,
+        "noImplicitReturns": true,
+        "noImplicitAny": true,
+        "preserveConstEnums": true
+    },
+    "filesGlob": [
+        "/src/app",
+        "/src/*.ts"
+    ],
+    "exclude": [
+        "data",
+        "logs",
+        "test",
+        "node_modules"
+    ]
+}
