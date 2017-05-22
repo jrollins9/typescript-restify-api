@@ -72,12 +72,15 @@ gulp.task("seed", function () {
                     timestamp = new Date(timestamp.getTime() + 1000);
 
                     seeds.push({
+                        "__v": 0,
                         "current": Math.random() < 0.5, // random boolean
                         "name": "Widget" + x,
                         "description": "description for widget" + x,
                         "rank": Math.floor(Math.random() * 5) + 1, // random number between 1-5
                         "createdAt": timestamp,
-                        "updatedAt": timestamp
+                        "updatedAt": timestamp,
+                        "deleted": false,
+                        "deletedAt": null
                     });
                 }
 
