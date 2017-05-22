@@ -32,6 +32,7 @@
     "@types/mongoose": "^4.7.11",
     "@types/restify": "^4.3.1",
     "mongoose": "^4.9.8",
+    "mongoose-soft-delete": "^0.2.1",
     "restify": "^4.3.0"
   }
 }
