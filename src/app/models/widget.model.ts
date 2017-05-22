@@ -27,7 +27,7 @@ const schema = new Schema({
     timestamps: true,
 });
 
-schema.plugin(softDelete, {index: true});
+schema.plugin(softDelete, {index: true, select: true});
 
 /* Add methods and statics here */
 

@@ -12,10 +12,10 @@ class WidgetController extends ResourceController {
     protected maxRecords = 20;
 
     // fields that results can be filtered by
-    public filterable = ['current', 'name', 'rank'];
+    public filterable = ['current', 'name', 'rank', 'deleted'];
 
     // fields that results can be sorted by
-    public sortable = ['name', 'updatedAt', 'rank'];
+    public sortable = ['name', 'updatedAt', 'rank', 'deletedAt'];
 
     /**
      * Soft delete resource
@@ -32,8 +32,12 @@ class WidgetController extends ResourceController {
         return this.model
             .findByIdAndUpdate(req.params.id, {deleted: true, deletedAt: timestamp}, {new: false})
             .exec()
-            .then(() => {
-                res.json(204, 'Widget soft deleted');
+            .then((widget) => {
+                let link: string = `<${(req.isSecure()) ? 'https' : 'http'}://${req.headers.host}${req.url}>; rel="self"`;
+                res.setHeader('Link', link);
+                
+                // return the soft deleted resource
+                res.json(200, widget);
                 return next();
             })
             .catch((err: any) => next(
